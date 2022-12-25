@@ -1,0 +1,48 @@
+.cardContainer:hover {
+    scale: 1.02;
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
+}
+
+.cardImage {
+    filter: grayscale(1) blur(3px);
+    background-color: #f1f1f1;
+}
+
+.cardContainer:hover .cardImage {
+    filter: grayscale(0) blur(0px);
+    transition: .5s;
+}
+
+.selected {
+    filter: grayscale(0) blur(0px);
+    scale: 1.1;
+    animation: moving 3s ease-out infinite;
+}
+
+@keyframes moving {
+    0% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+    
+      25% {
+        -webkit-transform: scale(1.005);
+        -ms-transform: scale(1.005);
+        transform: scale(1.005);
+      }
+    
+      60% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+    
+      100% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+      }
+}

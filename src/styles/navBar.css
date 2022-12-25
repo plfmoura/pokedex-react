@@ -1,0 +1,17 @@
+.ultraBall-icon {
+    animation: rotateBall 5s linear infinite;
+}
+
+@keyframes rotateBall {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.ultraBall-icon:hover {
+    cursor: pointer;
+    scale: 1.1;
+}

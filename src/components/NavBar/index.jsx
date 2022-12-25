@@ -3,11 +3,9 @@ import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import '../../styles/navBar.css'
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -42,6 +40,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
+    paddingTop: 13,
     [theme.breakpoints.up('sm')]: {
       width: '12ch',
       '&:focus': {
@@ -58,7 +57,7 @@ export default function NavBar({ pokemonFilter }) {
         <Toolbar>
             <Box display="flex" justifyContent="space-between" width="100%">
                 <Box component="img" src='/assets/pokemon-logo.webp' height="3em" />
-                <Box component="img" src='/assets/ultra-ball.ico' height="3em" />
+                <Box component="img" src='/assets/ultra-ball.ico' height="3em" className='ultraBall-icon'/>
                 <Search onChange={(e) => pokemonFilter(e.target.value)}>
                     <SearchIconWrapper>
                     <SearchIcon />
